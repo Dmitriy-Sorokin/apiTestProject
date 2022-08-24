@@ -1,9 +1,11 @@
 from utils.http_method import Http_methods
 
+
 ''' Methods for tests Google_maps_api'''
 
 base_url = "https://rahulshettyacademy.com"
 key = "?key=qaclick123"
+
 
 
 class Google_maps_api():
@@ -71,6 +73,6 @@ class Google_maps_api():
         json_for_delete_new_location = {
             "place_id": place_id
         }
-        result_delete = Http_methods.delete(delete_url,json_for_delete_new_location)
+        result_delete = Http_methods.delete(delete_url, json_for_delete_new_location)
         print(result_delete.text)
         return result_delete
